@@ -19,6 +19,15 @@
       />
 
 
+  <!-- Browser View -->
+  <browser:page
+      name="permissions_table_view"
+      for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+      class=".views.PermissionsTableView"
+      layer="mingtak.viewPermissions.interfaces.IMingtakViewpermissionsLayer"
+      permission="cmf.ManagePortal"
+      />
+
   <!-- configlet -->
   <browser:page
     name="viewPermissionsControlPanel"
