@@ -18,4 +18,14 @@
       directory="static"
       />
 
+
+  <!-- configlet -->
+  <browser:page
+    name="viewPermissionsControlPanel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    permission="cmf.ManagePortal"
+    class=".configlet.ViewPermissionsControlPanelView"
+    />
+
+
 </configure>
