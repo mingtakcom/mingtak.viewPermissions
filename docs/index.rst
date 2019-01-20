@@ -1,0 +1,5 @@
+=======================
+mingtak.viewPermissions
+=======================
+
+User documentation
