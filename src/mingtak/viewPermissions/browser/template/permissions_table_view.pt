@@ -14,7 +14,7 @@
 
 <h3>權限控制表</h3>
 
-<form>
+<form method="POST">
   <table>
     <tr class="tr-title">
       <td>姓名\權限</td>
@@ -23,19 +23,23 @@
       </td>
     </tr>
 
-
-
     <tr class="tr-body" tal:repeat="user view/users">
-      <td>${python:user.getProperty('fullname')}</td>
+      <tal:user define="userId python:user.getProperty('id');
+                        userName python:user.getProperty('fullname')">
+        <td>${userName}</td>
+
+        <td tal:repeat="item view/view_name_list">
+          <input type="checkbox"
+                 tal:attributes="name python:'%s--%s' % (item[0], userId);
+                                 id python:'%s--%s' % (item[0], userId);
+                                 checked python:view.checkPermission(userId, item[0])"
+          >
+        </td>
+      </tal:user>
     </tr>
-
-
-
   </table>
-
-
-
-
+<br>
+  <input type="submit" name="submit" value="更新">
 </form>
 
 

@@ -14,7 +14,7 @@ long_description = '\n\n'.join([
 
 setup(
     name='mingtak.viewPermissions',
-    version='1.0a1',
+    version='1.0',
     description="BrowserView Permissions Control Table",
     long_description=long_description,
     # Get more from https://pypi.python.org/pypi?%3Aaction=list_classifiers
